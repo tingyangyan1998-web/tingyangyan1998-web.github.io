@@ -532,9 +532,11 @@ a:focus-visible {
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
-.style-option:hover {
-  border-color: #a7c6e8;
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .style-option:hover {
+    border-color: #a7c6e8;
+    transform: translateY(-2px);
+  }
 }
 
 .style-option.is-active {
@@ -852,7 +854,7 @@ kbd {
   .style-options {
     width: calc(100% + 18px);
     margin-right: -18px;
-    padding-right: 18px;
+    padding: 6px 18px 10px 0;
     display: flex;
     gap: 9px;
     overflow-x: auto;

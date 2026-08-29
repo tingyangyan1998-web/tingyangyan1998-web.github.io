@@ -288,6 +288,8 @@ a.company-card:hover {
 .company-logo {
   width: 56px;
   height: 56px;
+  grid-row: 1 / span 2;
+  align-self: center;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -444,29 +446,7 @@ a.company-card:hover {
 .identity-logo--alibaba { background: #fff2e8; }
 .identity-logo--alibaba img { width: 58px; height: 58px; }
 .company-identity p { margin: var(--space-4) 0 8px; color: var(--blue); font-size: 12px; font-weight: 700; }
-.company-identity h2 { margin: 0 0 10px; font-size: 34px; }
-.company-identity > span:last-child { color: var(--muted); font-size: 13px; }
-
-.case-content {
-  padding: var(--space-10) 0;
-  display: grid;
-  grid-template-columns: .7fr 1.3fr;
-  gap: clamp(48px, 8vw, 96px);
-}
-
-.case-story {
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-}
-
-.case-story p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.9;
-}
-
-.case-story p + p { margin-top: 18px; }
+.company-identity h2 { margin: 0; font-size: 34px; }
 
 .case-reference {
   scroll-margin-top: 88px;
@@ -738,9 +718,6 @@ a.company-card:hover {
   .case-facts > div:first-child { border-top: 0; }
   .company-identity { min-height: 270px; border-radius: 20px; }
 
-  .case-content { padding: 64px 0; grid-template-columns: 1fr; gap: var(--space-4); }
-  .case-story { padding-top: var(--space-3); }
-  .case-story p { font-size: 14px; }
   .case-materials { padding: 30px 24px; border-radius: 20px; }
 
   .case-reference { scroll-margin-top: 72px; padding: 64px 0; }

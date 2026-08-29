@@ -303,6 +303,8 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
 .partner-logo {
   width: 56px;
   height: 56px;
+  grid-row: 1 / span 2;
+  align-self: center;
   display: grid;
   place-items: center;
   overflow: hidden;
