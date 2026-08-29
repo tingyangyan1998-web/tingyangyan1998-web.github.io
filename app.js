@@ -5,6 +5,14 @@ const UNIFORMS = [
     shortName: "灰蓝裤装",
     description: "柔和灰蓝色调搭配双排扣收腰廓形，兼顾专业感与亲和力，适合需要高识别度的企业服务岗位。",
     applications: ["行政接待", "商务会务", "企业讲解"],
+    product: {
+      color: "柔和灰蓝",
+      combination: "双排扣外套 + 西裤",
+      silhouette: "双排扣 · 收腰廓形",
+      material: "挺括、抗皱的职业装面料",
+      season: "春秋及空调环境",
+      customization: "面料 / 颜色 / 企业标识 / 尺码",
+    },
   },
   {
     code: "WL-02",
@@ -12,6 +20,14 @@ const UNIFORMS = [
     shortName: "海军蓝裤装",
     description: "深海军蓝单排扣套装搭配浅雾蓝飘带领，沉稳利落，在正式商务环境中呈现可信赖的管理者形象。",
     applications: ["客户洽谈", "管理岗位", "正式会议"],
+    product: {
+      color: "深海军蓝 + 浅雾蓝",
+      combination: "单排扣外套 + 西裤",
+      silhouette: "单排扣 · 翻领收腰",
+      material: "耐磨、抗皱的职业装面料",
+      season: "春秋及正式室内场合",
+      customization: "面料 / 颜色 / 企业标识 / 尺码",
+    },
   },
   {
     code: "WL-03",
@@ -19,6 +35,14 @@ const UNIFORMS = [
     shortName: "米杏裙装",
     description: "温暖米杏色无领西装与同色直筒裙形成轻盈、优雅的整体形象，适合重视亲和感与礼仪感的岗位。",
     applications: ["前台接待", "礼宾服务", "品牌活动"],
+    product: {
+      color: "柔和米杏",
+      combination: "无领外套 + 直筒裙",
+      silhouette: "无领设计 · 收腰线条",
+      material: "柔和、垂顺的职业装面料",
+      season: "春夏及温暖室内环境",
+      customization: "面料 / 颜色 / 企业标识 / 尺码",
+    },
   },
   {
     code: "WL-04",
@@ -26,6 +50,14 @@ const UNIFORMS = [
     shortName: "炭灰裤装",
     description: "炭灰立领套装以浅蓝细窄滚边提亮，线条克制而有辨识度，为专业讲解与技术服务场景增添现代感。",
     applications: ["展厅讲解", "项目接待", "专业服务"],
+    product: {
+      color: "炭灰 + 浅蓝滚边",
+      combination: "立领外套 + 西裤",
+      silhouette: "立领设计 · 拼色滚边",
+      material: "挺括、耐磨的职业装面料",
+      season: "秋冬及空调环境",
+      customization: "面料 / 颜色 / 企业标识 / 尺码",
+    },
   },
 ];
 
@@ -46,6 +78,14 @@ const elements = {
   styleCode: document.querySelector("#styleCode"),
   styleDescription: document.querySelector("#styleDescription"),
   applications: document.querySelector("#applications"),
+  productInfoName: document.querySelector("#productInfoName"),
+  productInfoCode: document.querySelector("#productInfoCode"),
+  productColor: document.querySelector("#productColor"),
+  productCombination: document.querySelector("#productCombination"),
+  productSilhouette: document.querySelector("#productSilhouette"),
+  productMaterial: document.querySelector("#productMaterial"),
+  productSeason: document.querySelector("#productSeason"),
+  productCustomization: document.querySelector("#productCustomization"),
   styleOptions: document.querySelector("#styleOptions"),
   styleButtons: [...document.querySelectorAll(".style-option")],
   sceneButtons: [...document.querySelectorAll(".scene-option")],
@@ -123,6 +163,14 @@ function updateContent({ announce = true, updateUrl = true } = {}) {
       return tag;
     }),
   );
+  elements.productInfoName.textContent = uniform.name;
+  elements.productInfoCode.textContent = uniform.code;
+  elements.productColor.textContent = uniform.product.color;
+  elements.productCombination.textContent = uniform.product.combination;
+  elements.productSilhouette.textContent = uniform.product.silhouette;
+  elements.productMaterial.textContent = uniform.product.material;
+  elements.productSeason.textContent = uniform.product.season;
+  elements.productCustomization.textContent = uniform.product.customization;
 
   setPressedState(elements.styleButtons, activeStyle);
   setPressedState(elements.sceneButtons, activeScene);

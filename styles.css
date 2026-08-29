@@ -661,6 +661,97 @@ a:focus-visible {
   font-size: 10px;
 }
 
+.product-info {
+  margin-top: 24px;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+}
+
+.product-info-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.product-info-eyebrow {
+  margin: 0 0 8px;
+  color: var(--blue);
+  letter-spacing: .12em;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.product-info h2 {
+  margin: 0;
+  letter-spacing: -.025em;
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+.product-info-header > div > p:last-child {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.product-info-code {
+  padding: 7px 11px;
+  flex: 0 0 auto;
+  border: 1px solid #cfe0f4;
+  border-radius: 7px;
+  color: var(--blue);
+  background: #f3f8ff;
+  letter-spacing: .08em;
+  font: 700 11px/1.1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.product-specs {
+  margin: 26px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 32px;
+}
+
+.product-specs > div {
+  min-width: 0;
+  padding: 16px 0 17px;
+  border-top: 1px solid var(--line);
+}
+
+.product-specs dt {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.product-specs dd {
+  margin: 0;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.product-info-note {
+  margin: 4px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.product-info-note b {
+  margin-right: 8px;
+  color: var(--blue-dark);
+}
+
 .case-promo {
   margin-top: 32px;
   padding: 32px 0;
@@ -876,6 +967,15 @@ kbd {
   .application-card { align-items: center; }
   .keyboard-hint { display: none; }
 
+  .product-info {
+    margin-top: 16px;
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .product-info h2 { font-size: 22px; }
+  .product-specs { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 20px; }
+
   .case-promo {
     padding: 24px 0;
     align-items: flex-start;
@@ -909,6 +1009,13 @@ kbd {
   .control-column { padding-right: 16px; padding-left: 16px; }
   .scene-option { min-height: 65px; padding-inline: 3px; font-size: 10px; }
   .application-card { display: grid; gap: 10px; }
+  .product-info { padding: 20px 16px; }
+  .product-info-header { gap: 14px; }
+  .product-info-eyebrow { letter-spacing: .06em; }
+  .product-info h2 { font-size: 20px; }
+  .product-info-header > div > p:last-child { font-size: 11px; }
+  .product-specs { margin-top: 22px; column-gap: 16px; }
+  .product-specs dd { font-size: 13px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
