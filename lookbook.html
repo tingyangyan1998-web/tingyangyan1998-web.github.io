@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b4ca1" />
+    <meta name="description" content="定制工服上身效果画册：同一模特，四款工服，会议室、企业总部大堂与讲解场景自由切换。" />
+    <meta property="og:title" content="定制工服上身效果画册" />
+    <meta property="og:description" content="同一模特 · 四款工服 · 三种场景。独立效果展示，不作为真实企业案例照片。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tingyangyan1998-web.github.io/lookbook.html" />
+    <meta property="og:image" content="https://tingyangyan1998-web.github.io/uniform-01-lobby.jpg" />
+    <title>定制工服上身效果画册</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog">跳到画册内容</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="返回网站首页">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span class="brand-copy">
+            <strong>WORKWEAR LOOKBOOK</strong>
+            <small>独立效果展示 · 非项目实拍</small>
+          </span>
+        </a>
+        <div class="header-actions">
+          <a class="cases-link" href="index.html"><span>网站首页</span><b aria-hidden="true">↗</b></a>
+          <button class="share-button" id="shareButton" type="button" aria-label="分享当前款式与场景">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a3 3 0 1 0-2.83-4 3 3 0 0 0 .15.92L8.9 8.13a3 3 0 1 0 0 3.74l6.42 3.21A3 3 0 1 0 16.2 13l-6.43-3.21a3 3 0 0 0 0-1.58l6.43-3.21A3 3 0 0 0 18 8Z"/></svg>
+            <span>分享画册</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="catalog" class="catalog-shell">
+      <section class="intro" aria-labelledby="pageTitle">
+        <p class="eyebrow"><span></span> WORKWEAR EFFECT LOOKBOOK</p>
+        <div class="intro-row">
+          <div>
+            <h1 id="pageTitle">定制工服上身效果画册</h1>
+            <p>同一模特，快速比较不同款式在会议室、总部大堂与讲解场景中的整体效果。</p>
+          </div>
+          <div class="intro-meta" aria-label="画册内容概览">
+            <span><b>04</b> 款工服</span>
+            <i></i>
+            <span><b>03</b> 种场景</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog-card" aria-label="工服效果浏览器">
+        <div class="viewer-column">
+          <div class="image-stage">
+            <div class="image-badge"><span id="badgeCode">WL-01</span><em id="badgeScene">总部大堂</em></div>
+            <img id="heroImage" src="uniform-01-lobby.jpg" alt="灰蓝双排扣裤装在企业总部大堂的全身上身效果" width="1024" height="1536" fetchpriority="high" />
+            <div class="image-loader" id="imageLoader" aria-hidden="true"><span></span></div>
+            <button class="nav-arrow nav-prev" id="prevScene" type="button" aria-label="上一个场景">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button class="nav-arrow nav-next" id="nextScene" type="button" aria-label="下一个场景">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+            <div class="image-count" id="imageCount" aria-hidden="true">02 / 03</div>
+          </div>
+          <p class="viewer-note"><span aria-hidden="true">●</span> 效果图用于款式与场景沟通，不作为真实企业案例照片</p>
+        </div>
+
+        <div class="control-column">
+          <div class="style-heading">
+            <div>
+              <p class="section-kicker">STYLE <span id="styleNumber">01</span></p>
+              <h2 id="styleName">灰蓝双排扣裤装</h2>
+            </div>
+            <span class="style-code" id="styleCode">WL-01</span>
+          </div>
+          <p class="style-description" id="styleDescription">柔和灰蓝色调搭配双排扣收腰廓形，兼顾专业感与亲和力，适合需要高识别度的企业服务岗位。</p>
+          <div class="divider"></div>
+
+          <fieldset class="selector-group">
+            <legend><span>01</span> 选择工服款式</legend>
+            <div class="style-options" id="styleOptions" role="list">
+              <button class="style-option is-active" type="button" data-style="0" aria-pressed="true">
+                <img src="uniform-01-lobby.jpg" alt="" width="88" height="116" loading="eager" />
+                <span><b>01</b><small>灰蓝裤装</small></span>
+              </button>
+              <button class="style-option" type="button" data-style="1" aria-pressed="false">
+                <img src="uniform-02-lobby.jpg" alt="" width="88" height="116" loading="lazy" />
+                <span><b>02</b><small>海军蓝裤装</small></span>
+              </button>
+              <button class="style-option" type="button" data-style="2" aria-pressed="false">
+                <img src="uniform-03-lobby.jpg" alt="" width="88" height="116" loading="lazy" />
+                <span><b>03</b><small>米杏裙装</small></span>
+              </button>
+              <button class="style-option" type="button" data-style="3" aria-pressed="false">
+                <img src="uniform-04-lobby.jpg" alt="" width="88" height="116" loading="lazy" />
+                <span><b>04</b><small>炭灰裤装</small></span>
+              </button>
+            </div>
+          </fieldset>
+
+          <fieldset class="selector-group scene-group">
+            <legend><span>02</span> 选择展示场景</legend>
+            <div class="scene-options" id="sceneOptions">
+              <button class="scene-option" type="button" data-scene="meeting" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v10H4zM8 19h8M12 15v4M7 9h3m2 0h5M7 12h10"/></svg>
+                <span>会议室</span>
+              </button>
+              <button class="scene-option is-active" type="button" data-scene="lobby" aria-pressed="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-5h6v5M8 10h2m4 0h2"/></svg>
+                <span>总部大堂</span>
+              </button>
+              <button class="scene-option" type="button" data-scene="presentation" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v11H4zM8 20l4-5 4 5M8 8h8m-8 3h5"/></svg>
+                <span>讲解场景</span>
+              </button>
+            </div>
+          </fieldset>
+
+          <div class="application-card">
+            <span class="application-label">推荐应用</span>
+            <div id="applications" class="application-tags" aria-live="polite">
+              <span>行政接待</span><span>商务会务</span><span>企业讲解</span>
+            </div>
+          </div>
+          <p class="keyboard-hint"><kbd>←</kbd><kbd>→</kbd> 切换场景　<kbd>↑</kbd><kbd>↓</kbd> 切换款式</p>
+        </div>
+      </section>
+
+      <aside class="case-promo" aria-label="真实合作案例入口">
+        <div>
+          <p>VERIFIED CLIENT CASES</p>
+          <h2>想了解真实服务经验，可继续查看合作案例。</h2>
+          <span>腾讯、美团、阿里巴巴均为真实合作过的企业；未提供的项目细节不会虚构。</span>
+        </div>
+        <a href="cases.html">查看真实案例 <b aria-hidden="true">→</b></a>
+      </aside>
+    </main>
+
+    <footer>
+      <p>WORKWEAR LOOKBOOK · EFFECT DISPLAY</p>
+      <p>效果图用于款式与场景沟通，最终成衣以面料及工艺样板为准</p>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="sr-only" id="changeAnnouncement" aria-live="polite"></div>
+    <noscript><p class="noscript">请开启浏览器 JavaScript，以切换不同款式与场景。</p></noscript>
+  </body>
+</html>
