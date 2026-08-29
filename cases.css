@@ -491,11 +491,63 @@ a.company-card:hover {
   line-height: 1.85;
 }
 
+.reference-tabs {
+  width: min(760px, 100%);
+  margin: var(--space-4) auto 0;
+  padding: 6px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #eef3f9;
+}
+
+.reference-tab {
+  min-width: 0;
+  min-height: 52px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 11px;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.reference-tab span {
+  font-size: 10px;
+  font-weight: 800;
+  opacity: .72;
+}
+
+.reference-tab b {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.reference-tab:hover { color: var(--blue-dark); background: #fff; }
+
+.reference-tab[aria-selected="true"] {
+  color: #fff;
+  background: var(--blue-dark);
+  box-shadow: 0 8px 20px rgba(7, 63, 135, .18);
+}
+
+.reference-tab[aria-selected="true"] span { opacity: .78; }
+
 .reference-catalog {
-  margin-top: var(--space-6);
+  margin-top: var(--space-4);
   display: grid;
   gap: var(--space-6);
 }
+
+.reference-catalog[data-style-catalog] > .reference-style:not(.is-active) { display: none; }
 
 .reference-style {
   min-width: 0;
@@ -693,7 +745,16 @@ a.company-card:hover {
 
   .case-reference { scroll-margin-top: 72px; padding: 64px 0; }
   .reference-heading > p:last-child { font-size: 14px; }
-  .reference-catalog { margin-top: var(--space-4); gap: var(--space-5); }
+  .reference-tabs {
+    margin-top: var(--space-3);
+    padding: 5px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    border-radius: 14px;
+  }
+  .reference-tab { min-height: 48px; padding: 7px 10px; }
+  .reference-tab b { font-size: 13px; }
+  .reference-catalog { margin-top: var(--space-3); gap: var(--space-5); }
   .reference-style > header { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; }
   .reference-style h3 { font-size: 20px; }
   .reference-style header a { grid-column: 2; min-height: 44px; }
@@ -705,6 +766,7 @@ a.company-card:hover {
     display: flex;
     gap: 12px;
     overflow-x: auto;
+    overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
     scrollbar-width: none;
   }
