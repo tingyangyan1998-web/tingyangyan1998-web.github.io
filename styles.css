@@ -120,6 +120,35 @@ a:focus-visible {
   font-size: 11px;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cases-link {
+  height: 40px;
+  padding: 0 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(145deg, #176bc9, #073b7d);
+  box-shadow: 0 8px 19px rgba(11, 76, 161, .18);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.cases-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 11px 23px rgba(11, 76, 161, .24);
+}
+
+.cases-link b { font-size: 14px; }
+
 .share-button {
   height: 40px;
   padding: 0 15px;
@@ -613,6 +642,61 @@ a:focus-visible {
   font-size: 10px;
 }
 
+.case-promo {
+  margin-top: 22px;
+  padding: 25px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  overflow: hidden;
+  border-radius: 18px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 88% 0%, rgba(57, 133, 222, .34), transparent 19rem),
+    #071d39;
+  box-shadow: 0 17px 45px rgba(8, 39, 76, .16);
+}
+
+.case-promo p {
+  margin: 0 0 7px;
+  color: #78b7ff;
+  letter-spacing: .12em;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.case-promo h2 {
+  margin: 0 0 7px;
+  letter-spacing: -.025em;
+  font-size: 21px;
+}
+
+.case-promo span {
+  color: #a9bbd0;
+  font-size: 10px;
+}
+
+.case-promo > a {
+  min-height: 42px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(137, 186, 242, .35);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255,255,255,.07);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  transition: background .2s, transform .2s;
+}
+
+.case-promo > a:hover { background: rgba(255,255,255,.12); transform: translateY(-1px); }
+.case-promo > a b { color: #7dbaff; font-size: 16px; }
+
 kbd {
   min-width: 19px;
   padding: 2px 5px;
@@ -709,6 +793,7 @@ footer p { margin: 0; }
   .header-inner { min-height: 64px; }
   .share-button span { display: none; }
   .share-button { width: 40px; padding: 0; justify-content: center; }
+  .cases-link { padding: 0 13px; }
 
   .catalog-shell { padding: 31px 0 30px; }
   .intro { margin-bottom: 18px; }
@@ -768,6 +853,14 @@ footer p { margin: 0; }
   .application-card { align-items: flex-start; }
   .keyboard-hint { display: none; }
 
+  .case-promo {
+    padding: 22px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .case-promo h2 { font-size: 20px; }
+
   footer {
     padding-bottom: calc(24px + env(safe-area-inset-bottom));
     display: grid;
@@ -783,6 +876,8 @@ footer p { margin: 0; }
   .brand-copy strong { font-size: 10px; }
   .brand-copy small { font-size: 9px; }
   .brand-mark { width: 35px; height: 35px; }
+  .cases-link { width: 40px; padding: 0; justify-content: center; }
+  .cases-link span { display: none; }
   .eyebrow { font-size: 9px; }
   .control-column { padding-right: 14px; padding-left: 14px; }
   .scene-option { min-height: 65px; padding-inline: 3px; font-size: 10px; }
