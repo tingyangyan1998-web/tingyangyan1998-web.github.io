@@ -1,0 +1,201 @@
+:root {
+  --site-ink: #10233f;
+  --site-muted: #667990;
+  --site-blue: #0b57b7;
+  --site-blue-dark: #073f87;
+  --site-line: #dce5ef;
+  --site-canvas: #f5f8fc;
+  --site-container: 1120px;
+}
+
+.global-header {
+  position: sticky;
+  z-index: 30;
+  top: 0;
+  border-bottom: 1px solid rgba(204, 217, 231, .88);
+  background: rgba(255, 255, 255, .95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.global-nav.global-nav {
+  width: min(var(--site-container), calc(100% - 48px));
+  height: 72px;
+  min-height: 72px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.global-brand.global-brand {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+  color: var(--site-ink);
+  text-decoration: none;
+}
+
+.global-mark.global-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  border-radius: 10px 10px 10px 3px;
+  color: #fff;
+  background: var(--site-blue-dark);
+  font: 700 19px/1 Georgia, serif;
+}
+
+.global-brand-copy.global-brand-copy {
+  display: grid;
+  gap: 3px;
+}
+
+.global-brand-copy :is(b, strong) {
+  color: var(--site-ink);
+  letter-spacing: .04em;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.global-brand-copy small {
+  color: var(--site-muted);
+  letter-spacing: .1em;
+  font-size: 9px;
+  line-height: 1.2;
+}
+
+.global-nav .global-tabs {
+  width: 280px;
+  display: grid;
+  grid-template-columns: repeat(3, 88px);
+  align-items: center;
+  gap: 8px;
+}
+
+.global-nav .global-tabs a {
+  width: 88px;
+  min-height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--site-muted);
+  background: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.global-nav .global-tabs a:hover {
+  color: var(--site-blue-dark);
+  background: #eaf2fb;
+}
+
+.global-nav .global-tabs a.is-active {
+  color: #fff;
+  background: var(--site-blue-dark);
+}
+
+h1.global-page-title {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  letter-spacing: -.05em;
+  font-size: clamp(46px, 4.5vw, 60px);
+  line-height: 1.08;
+}
+
+/* Keep the label above each primary-page title on one shared text rhythm. */
+.home-hero .eyebrow,
+.archive-hero .overline,
+.intro > .eyebrow {
+  margin-bottom: 0;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.global-page-lead.global-page-lead {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--site-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.home-hero {
+  min-height: 0;
+  padding-top: 72px;
+  align-items: start;
+}
+
+.archive-hero,
+.catalog-shell {
+  padding-top: 72px;
+}
+
+@media (max-width: 720px) {
+  .global-nav.global-nav {
+    width: min(100% - 28px, 620px);
+    height: 64px;
+    min-height: 64px;
+    gap: 8px;
+  }
+
+  .global-brand-copy.global-brand-copy { display: none; }
+
+  .global-mark.global-mark {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+    font-size: 17px;
+  }
+
+  .global-nav .global-tabs {
+    width: 248px;
+    grid-template-columns: repeat(3, 80px);
+    gap: 4px;
+  }
+
+  .global-nav .global-tabs a {
+    width: 80px;
+    min-height: 44px;
+    padding: 0;
+    font-size: 11px;
+  }
+
+  h1.global-page-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 38px;
+    line-height: 1.12;
+  }
+
+  .home-hero .eyebrow,
+  .archive-hero .overline,
+  .intro > .eyebrow {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .global-page-lead.global-page-lead {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .home-hero,
+  .archive-hero,
+  .catalog-shell {
+    padding-top: 48px;
+  }
+}
+
+@media (max-width: 390px) {
+  .global-nav.global-nav { width: calc(100% - 24px); }
+}

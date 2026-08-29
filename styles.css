@@ -60,7 +60,7 @@ button {
 
 button:focus-visible,
 a:focus-visible {
-  outline: 3px solid #82b8ff;
+  outline: 3px solid #82b9ff;
   outline-offset: 3px;
 }
 
@@ -157,7 +157,7 @@ a:focus-visible {
 .header-inner nav a.is-active { color: #fff; background: var(--blue-dark); }
 
 .share-button {
-  height: 40px;
+  min-height: 44px;
   padding: 0 15px;
   display: inline-flex;
   align-items: center;
@@ -349,8 +349,8 @@ a:focus-visible {
   position: absolute;
   z-index: 5;
   top: 50%;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.6);
@@ -618,9 +618,11 @@ a:focus-visible {
 
 .application-card {
   padding: 15px 16px;
-  display: flex;
+  display: grid;
   align-items: center;
-  gap: 14px;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
   border: 1px solid #d9e8f7;
   border-radius: 12px;
   background: #f5f9fe;
@@ -636,6 +638,8 @@ a:focus-visible {
 .application-tags {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 6px;
 }
 
@@ -687,7 +691,7 @@ a:focus-visible {
 }
 
 .case-promo > a {
-  min-height: 42px;
+  min-height: 44px;
   padding: 0 17px;
   display: inline-flex;
   align-items: center;
@@ -736,7 +740,7 @@ kbd {
 .footer-brand b { color: var(--ink); font-size: 12px; }
 .footer-brand span { letter-spacing: .08em; font-size: 8px; }
 .lookbook-footer nav { display: flex; justify-content: center; gap: 24px; }
-.lookbook-footer nav a { text-decoration: none; }
+.lookbook-footer nav a { min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
 .lookbook-footer nav a:hover { color: var(--blue); }
 .lookbook-footer p { margin: 0; text-align: right; }
 
@@ -867,7 +871,7 @@ kbd {
 
   .style-option img { height: 103px; }
   .scene-option { min-height: 68px; }
-  .application-card { align-items: flex-start; }
+  .application-card { align-items: center; }
   .keyboard-hint { display: none; }
 
   .case-promo {
@@ -902,7 +906,7 @@ kbd {
   .eyebrow { font-size: 9px; }
   .control-column { padding-right: 16px; padding-left: 16px; }
   .scene-option { min-height: 65px; padding-inline: 3px; font-size: 10px; }
-  .application-card { display: grid; gap: 8px; }
+  .application-card { display: grid; gap: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

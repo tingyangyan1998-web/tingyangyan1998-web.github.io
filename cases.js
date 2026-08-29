@@ -33,7 +33,7 @@ shareButton?.addEventListener("click", async () => {
     try {
       await navigator.share({
         title: document.title,
-        text: "腾讯企业工服服务案例",
+        text: document.querySelector('meta[name="description"]')?.content || document.title,
         url: window.location.href,
       });
       return;

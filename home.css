@@ -280,10 +280,10 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
 }
 
 .partner-card {
-  min-height: 112px;
+  min-height: 132px;
   padding: 24px;
   display: grid;
-  grid-template-columns: 56px minmax(0, 1fr) auto;
+  grid-template-columns: 56px minmax(0, 1fr);
   align-items: center;
   gap: 16px;
   border: 1px solid var(--line);
@@ -335,9 +335,11 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
 .partner-name b { font-size: 20px; }
 
 .partner-state {
-  color: var(--muted);
+  grid-column: 2;
+  color: var(--blue-dark);
   white-space: nowrap;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .partner-state i {
@@ -348,6 +350,7 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
 
 .section-link {
   margin-top: var(--space-3);
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   gap: var(--space-1);
@@ -433,7 +436,7 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
   gap: var(--space-3);
 }
 
-.home-footer nav a { text-decoration: none; }
+.home-footer nav a { min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
 .home-footer nav a:hover { color: var(--blue); }
 .home-footer p { margin: 0; text-align: right; }
 
@@ -441,7 +444,7 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
   .home-hero { grid-template-columns: .92fr 1.08fr; gap: 40px; }
   .hero-visual { height: 430px; }
   .partner-list { grid-template-columns: 1fr; }
-  .partner-card { min-height: 96px; }
+  .partner-card { min-height: 112px; }
   .contact-section { grid-template-columns: 1fr; }
 }
 
@@ -479,9 +482,9 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
   .hero-copy h1 { margin: 20px 0; line-height: 1.12; }
   .hero-lead { font-size: 14px; line-height: 1.8; }
   .hero-actions { margin-top: var(--space-3); gap: 18px; }
-  .primary-action, .text-action { min-height: 42px; font-size: 12px; }
+  .primary-action, .text-action { min-height: 44px; font-size: 12px; }
   .primary-action { padding-inline: 17px; }
-  .hero-visual { height: 330px; border-radius: 18px; }
+  .hero-visual { height: 330px; border-radius: 20px; }
   .hero-visual span, .hero-visual b { bottom: 18px; font-size: 11px; }
   .hero-visual span { left: 18px; }
   .hero-visual b { right: 18px; }
@@ -489,8 +492,8 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
   .partner-section { padding: 56px 0; }
   .section-heading > span, .contact-heading > span { font-size: 13px; }
   .partner-list { margin-top: var(--space-4); gap: 12px; }
-  .partner-card { min-height: 92px; padding: 16px; }
-  .partner-name b { font-size: 19px; }
+  .partner-card { min-height: 112px; padding: 18px; }
+  .partner-name b { font-size: 20px; }
 
   .contact-section {
     margin-bottom: 56px;
