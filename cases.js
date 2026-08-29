@@ -33,7 +33,7 @@ shareButton?.addEventListener("click", async () => {
     try {
       await navigator.share({
         title: document.title,
-        text: "腾讯企业工服真实服务案例（详细项目资料整理中）",
+        text: "腾讯企业工服服务案例",
         url: window.location.href,
       });
       return;
