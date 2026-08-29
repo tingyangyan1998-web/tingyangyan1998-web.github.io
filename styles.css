@@ -133,30 +133,28 @@ a:focus-visible {
   font-size: 9px;
 }
 
-.header-actions {
+.header-inner nav {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.cases-link {
-  height: 40px;
+.header-inner nav a {
+  min-height: 40px;
   padding: 0 15px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
   border-radius: 999px;
-  color: #fff;
-  background: var(--blue-dark);
+  color: var(--muted);
   text-decoration: none;
+  white-space: nowrap;
   font-size: 12px;
   font-weight: 700;
-  transition: transform .2s, box-shadow .2s;
 }
 
-.cases-link:hover { background: var(--blue); }
-
-.cases-link b { font-size: 14px; }
+.header-inner nav a:hover { color: var(--blue-dark); background: #eaf2fb; }
+.header-inner nav a.is-active { color: #fff; background: var(--blue-dark); }
 
 .share-button {
   height: 40px;
@@ -220,6 +218,13 @@ a:focus-visible {
   gap: 30px;
 }
 
+.intro-tools {
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
 .intro h1 {
   margin: 0;
   letter-spacing: -0.035em;
@@ -235,7 +240,6 @@ a:focus-visible {
 }
 
 .intro-meta {
-  padding-bottom: 5px;
   display: flex;
   align-items: center;
   gap: 18px;
@@ -804,15 +808,15 @@ kbd {
   }
 
   .header-inner { min-height: 64px; }
-  .share-button span { display: none; }
-  .share-button { width: 40px; padding: 0; justify-content: center; }
-  .cases-link { padding: 0 13px; }
+  .header-inner nav { gap: 4px; }
+  .header-inner nav a { min-height: 44px; padding: 0 10px; font-size: 11px; }
 
   .catalog-shell { padding: 48px 0 32px; }
   .intro { margin-bottom: 24px; }
   .intro-row { display: block; }
   .intro h1 { font-size: 38px; }
   .intro p:not(.eyebrow) { max-width: 31em; margin-top: 9px; font-size: 13px; }
+  .intro-tools { margin-top: 16px; padding: 0; }
   .intro-meta { display: none; }
 
   .catalog-card {
@@ -894,8 +898,7 @@ kbd {
   .lookbook-footer { width: calc(100% - 24px); }
   .brand-copy { display: none; }
   .brand-mark { width: 34px; height: 34px; }
-  .cases-link { width: 40px; padding: 0; justify-content: center; }
-  .cases-link span { display: none; }
+  .header-inner nav a { padding-inline: 8px; font-size: 10px; }
   .eyebrow { font-size: 9px; }
   .control-column { padding-right: 16px; padding-left: 16px; }
   .scene-option { min-height: 65px; padding-inline: 3px; font-size: 10px; }

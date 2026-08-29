@@ -129,15 +129,8 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
   font-weight: 700;
 }
 
-.nav-company {
-  color: var(--blue-dark);
-  border: 1px solid #b9cbe0;
-  background: #fff;
-}
-
-.nav-company:hover { border-color: var(--blue); }
-.nav-lookbook { color: #fff; background: var(--blue-dark); }
-.nav-lookbook:hover { background: var(--blue); }
+.home-nav nav a:hover { color: var(--blue-dark); background: #eaf2fb; }
+.home-nav nav a.is-active { color: #fff; background: var(--blue-dark); }
 
 .home-hero {
   min-height: 620px;
@@ -470,7 +463,7 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
   .brand-copy { display: none; }
   .home-mark { width: 34px; height: 34px; font-size: 17px; }
   .home-nav nav { gap: 6px; }
-  .home-nav nav a { min-height: 34px; padding: 0 11px; font-size: 10px; }
+  .home-nav nav a { min-height: 44px; padding: 0 11px; font-size: 11px; }
 
   .home-hero {
     min-height: 0;
@@ -536,7 +529,7 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
 @media (max-width: 390px) {
   :root { --text-display: 38px; }
   .section-shell, .home-nav, .home-footer, .home-hero { width: calc(100% - 24px); }
-  .home-nav nav a { padding-inline: 9px; font-size: 9px; }
+  .home-nav nav a { padding-inline: 8px; font-size: 10px; }
   .hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .hero-visual { height: 310px; }
   .partner-card { grid-template-columns: 48px minmax(0, 1fr); }

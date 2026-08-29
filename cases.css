@@ -537,7 +537,7 @@ a.company-card:hover {
   .brand-copy { display: none; }
   .portfolio-mark { width: 34px; height: 34px; font-size: 17px; }
   .portfolio-nav nav { gap: 4px; }
-  .portfolio-nav nav a { min-height: 34px; padding: 0 10px; font-size: 10px; }
+  .portfolio-nav nav a { min-height: 44px; padding: 0 10px; font-size: 11px; }
 
   .archive-hero { padding: 56px 0 64px; }
   .archive-hero h1, .case-hero h1 { margin: 20px 0; line-height: 1.12; }
@@ -601,7 +601,7 @@ a.company-card:hover {
 
 @media (max-width: 390px) {
   .section-shell, .portfolio-nav, .portfolio-footer { width: calc(100% - 24px); }
-  .portfolio-nav nav a { padding-inline: 8px; font-size: 9px; }
+  .portfolio-nav nav a { padding-inline: 8px; font-size: 10px; }
   .hero-actions, .case-hero-actions, .next-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
   .company-card { grid-template-columns: 48px minmax(0, 1fr); }
   .company-logo { width: 48px; height: 48px; }
