@@ -384,20 +384,39 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
 .contact-heading > span { color: #b2c2d5; }
 
 .contact-details {
+  margin: 0;
   padding-left: var(--space-5);
   border-left: 1px solid rgba(255, 255, 255, .18);
 }
 
-.contact-details p {
-  margin: 0 0 10px;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 700;
+.contact-details > div {
+  min-height: 48px;
+  padding: 12px 0;
+  display: grid;
+  grid-template-columns: minmax(88px, .8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, .12);
 }
 
-.contact-details span {
+.contact-details > div:first-child { padding-top: 0; }
+.contact-details > div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.contact-details dt {
   color: #90a8c3;
   font-size: 12px;
+}
+
+.contact-details dd {
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+  overflow-wrap: anywhere;
 }
 
 .home-footer {
@@ -492,6 +511,13 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
     border-top: 1px solid rgba(255, 255, 255, .18);
     border-left: 0;
   }
+
+  .contact-details > div {
+    grid-template-columns: minmax(76px, .8fr) minmax(0, 1.2fr);
+    gap: 16px;
+  }
+
+  .contact-details dd { font-size: 13px; }
 
   .home-footer {
     padding-top: 24px;
