@@ -9,7 +9,11 @@ function setupStyleCatalog(catalog, catalogIndex) {
   const tablist = document.createElement("div");
   tablist.className = "reference-tabs";
   tablist.setAttribute("role", "tablist");
-  tablist.setAttribute("aria-label", "选择工服款式");
+  tablist.setAttribute("aria-label", catalog.dataset.catalogLabel || "选择工服款式");
+  if (catalog.classList.contains("project-catalog")) {
+    tablist.classList.add("reference-tabs--project");
+    tablist.style.setProperty("--project-tab-columns", String(Math.min(panels.length, 3)));
+  }
 
   const tabs = panels.map((panel, index) => {
     const number = String(index + 1).padStart(2, "0");
@@ -38,7 +42,7 @@ function setupStyleCatalog(catalog, catalogIndex) {
   });
 
   function selectStyle(nextIndex, { focus = false, updateHash = false } = {}) {
-    const index = Math.max(0, Math.min(nextIndex, panels.length - 1));
+    const index = Math.max(0, Math.min(Math.trunc(nextIndex), panels.length - 1));
 
     tabs.forEach((tab, tabIndex) => {
       const selected = tabIndex === index;
@@ -49,7 +53,7 @@ function setupStyleCatalog(catalog, catalogIndex) {
     });
 
     if (focus) tabs[index].focus();
-    if (updateHash) {
+    if (updateHash && window.location.protocol !== "file:") {
       const url = new URL(window.location.href);
       url.searchParams.set("style", String(index + 1));
       history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
@@ -71,11 +75,50 @@ function setupStyleCatalog(catalog, catalogIndex) {
   });
 
   catalog.before(tablist);
+  catalog.dataset.enhanced = "true";
   const requestedStyle = Number(new URL(window.location.href).searchParams.get("style"));
-  selectStyle(requestedStyle >= 1 && requestedStyle <= panels.length ? requestedStyle - 1 : 0);
+  selectStyle(Number.isInteger(requestedStyle) && requestedStyle >= 1 && requestedStyle <= panels.length ? requestedStyle - 1 : 0);
 }
 
 document.querySelectorAll("[data-style-catalog]").forEach(setupStyleCatalog);
+
+const photoDialog = document.querySelector(".photo-dialog");
+if (photoDialog && typeof photoDialog.showModal === "function") {
+  const dialogImage = photoDialog.querySelector("img");
+  const dialogCaption = photoDialog.querySelector("figcaption");
+  const closePhoto = photoDialog.querySelector(".photo-dialog-close");
+  let photoOpener;
+
+  document.querySelectorAll("[data-photo]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      photoOpener = link;
+      dialogImage.src = link.href;
+      dialogImage.alt = link.querySelector("img").alt;
+      dialogCaption.textContent = link.dataset.photoCaption;
+      photoDialog.showModal();
+      document.body.classList.add("is-photo-open");
+      closePhoto.focus();
+    });
+  });
+
+  closePhoto.addEventListener("click", () => photoDialog.close());
+  photoDialog.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      photoDialog.close();
+    }
+  });
+  photoDialog.addEventListener("click", (event) => {
+    if (event.target === photoDialog) photoDialog.close();
+  });
+  photoDialog.addEventListener("close", () => {
+    document.body.classList.remove("is-photo-open");
+    dialogImage.removeAttribute("src");
+    photoOpener?.focus({ preventScroll: true });
+  });
+}
 
 function showToast(message) {
   if (!toast) return;

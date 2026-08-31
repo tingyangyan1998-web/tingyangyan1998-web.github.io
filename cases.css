@@ -527,7 +527,7 @@ a.company-card:hover {
   gap: var(--space-6);
 }
 
-.reference-catalog[data-style-catalog] > .reference-style:not(.is-active) { display: none; }
+.reference-catalog[data-enhanced="true"] > .reference-style:not(.is-active) { display: none; }
 
 .reference-style {
   min-width: 0;

@@ -1,0 +1,44 @@
+.logo-token {
+  flex: 0 0 auto;
+  background: #eef4fa;
+  border: 1px solid #e1e9f2;
+}
+
+.logo-token img {
+  display: block;
+  width: 84%;
+  height: 70%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.brand-bytedance { background: #154a92; border-color: #154a92; }
+.brand-honor { background: #f8f9fc; }
+.brand-webank { background: #fff; }
+.brand-vipshop { background: #ec008c; border-color: #ec008c; }
+.brand-meituan { background: #ffc300; border-color: #ffc300; }
+.brand-alibaba { background: #fff2e8; }
+.brand-meituan img, .brand-alibaba img { width: 56%; height: 56%; }
+.brand-vipshop img { width: 85%; max-width: 85px; height: auto; }
+.brand-wordmark { color: #073f87; font-size: 14px; font-weight: 750; white-space: nowrap; }
+.identity-logo .brand-wordmark { font-size: 30px; }
+.identity-logo.brand-honor img { max-width: 150px; }
+.identity-logo.brand-webank img { width: 88%; }
+
+@media (min-width: 721px) and (max-width: 940px) {
+  .partner-list--expanded { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 621px) and (max-width: 900px) {
+  .company-grid--expanded { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .partner-list--expanded { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .partner-list--expanded .partner-card { min-height: 104px; padding: 16px 12px; grid-template-columns: 36px minmax(0, 1fr); gap: 8px; }
+  .partner-list--expanded .partner-logo { width: 36px; height: 44px; border-radius: 9px; }
+  .partner-list--expanded .brand-wordmark { font-size: 12px; }
+  .partner-list--expanded .partner-name b { font-size: 15px; white-space: nowrap; }
+  .partner-list--expanded .partner-state { font-size: 11px; }
+  .partner-list--expanded .partner-state i { margin-left: 2px; }
+}
