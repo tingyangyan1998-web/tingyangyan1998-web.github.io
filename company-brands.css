@@ -25,6 +25,18 @@
 .identity-logo.brand-honor img { max-width: 150px; }
 .identity-logo.brand-webank img { width: 88%; }
 
+.partner-list--expanded { --partner-logo-size: 56px; }
+.partner-list--expanded .partner-card { grid-template-columns: var(--partner-logo-size) minmax(0, 1fr); }
+.partner-list--expanded .partner-logo {
+  width: var(--partner-logo-size);
+  height: var(--partner-logo-size);
+  min-width: var(--partner-logo-size);
+  min-height: var(--partner-logo-size);
+  aspect-ratio: 1 / 1;
+  align-self: center;
+  justify-self: center;
+}
+
 @media (min-width: 721px) and (max-width: 940px) {
   .partner-list--expanded { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -34,9 +46,9 @@
 }
 
 @media (max-width: 720px) {
-  .partner-list--expanded { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .partner-list--expanded .partner-card { min-height: 104px; padding: 16px 12px; grid-template-columns: 36px minmax(0, 1fr); gap: 8px; }
-  .partner-list--expanded .partner-logo { width: 36px; height: 44px; border-radius: 9px; }
+  .partner-list--expanded { --partner-logo-size: 44px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .partner-list--expanded .partner-card { min-height: 104px; padding: 16px 12px; gap: 8px; }
+  .partner-list--expanded .partner-logo { border-radius: 11px; }
   .partner-list--expanded .brand-wordmark { font-size: 12px; }
   .partner-list--expanded .partner-name b { font-size: 15px; white-space: nowrap; }
   .partner-list--expanded .partner-state { font-size: 11px; }
