@@ -17,9 +17,6 @@
 .brand-mindray { background: #fff; }
 .brand-webank { background: #fff; }
 .brand-vipshop { background: #ec008c; border-color: #ec008c; }
-.brand-meituan { background: #ffc300; border-color: #ffc300; }
-.brand-alibaba { background: #fff2e8; }
-.brand-meituan img, .brand-alibaba img { width: 56%; height: 56%; }
 .brand-vipshop img { width: 85%; max-width: 85px; height: auto; }
 .brand-wordmark { color: #073f87; font-size: 14px; font-weight: 750; white-space: nowrap; }
 .identity-logo .brand-wordmark { font-size: 30px; }

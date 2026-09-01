@@ -318,10 +318,6 @@ a:focus-visible { outline: 3px solid #82b9ff; outline-offset: 3px; }
 
 .partner-logo--tencent { background: #edf6ff; }
 .partner-logo--tencent img { width: 46px; }
-.partner-logo--meituan { background: #ffc300; }
-.partner-logo--meituan img { width: 30px; height: 30px; }
-.partner-logo--alibaba { background: #fff2e8; }
-.partner-logo--alibaba img { width: 31px; height: 31px; }
 
 .partner-name {
   min-width: 0;

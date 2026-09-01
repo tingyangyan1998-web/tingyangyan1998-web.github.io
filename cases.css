@@ -299,10 +299,6 @@ a.company-card:hover {
 .company-logo img { display: block; object-fit: contain; }
 .company-logo--tencent { background: #edf6ff; }
 .company-logo--tencent img { width: 46px; }
-.company-logo--meituan { background: #ffc300; }
-.company-logo--meituan img { width: 30px; height: 30px; }
-.company-logo--alibaba { background: #fff2e8; }
-.company-logo--alibaba img { width: 31px; height: 31px; }
 
 .company-copy { min-width: 0; display: grid; gap: 4px; }
 .company-copy small { color: #8a9db3; font-size: 10px; font-weight: 700; }
@@ -441,10 +437,6 @@ a.company-card:hover {
 }
 
 .identity-logo img { width: 142px; }
-.identity-logo--meituan { background: #ffc300; }
-.identity-logo--meituan img { width: 54px; height: 54px; }
-.identity-logo--alibaba { background: #fff2e8; }
-.identity-logo--alibaba img { width: 58px; height: 58px; }
 .company-identity p { margin: var(--space-4) 0 8px; color: var(--blue); font-size: 12px; font-weight: 700; }
 .company-identity h2 { margin: 0; font-size: 34px; }
 
