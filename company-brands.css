@@ -14,6 +14,7 @@
 
 .brand-bytedance { background: #154a92; border-color: #154a92; }
 .brand-honor { background: #f8f9fc; }
+.brand-mindray { background: #fff; }
 .brand-webank { background: #fff; }
 .brand-vipshop { background: #ec008c; border-color: #ec008c; }
 .brand-meituan { background: #ffc300; border-color: #ffc300; }
@@ -23,6 +24,7 @@
 .brand-wordmark { color: #073f87; font-size: 14px; font-weight: 750; white-space: nowrap; }
 .identity-logo .brand-wordmark { font-size: 30px; }
 .identity-logo.brand-honor img { max-width: 150px; }
+.identity-logo.brand-mindray img { width: 86%; height: auto; }
 .identity-logo.brand-webank img { width: 88%; }
 
 .partner-list--expanded { --partner-logo-size: 56px; }
